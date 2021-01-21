@@ -7,6 +7,23 @@ defmodule Friends.OffDays.OffDayManager do
 
   def set_off_days(person_id, off_days) do
     # TODO: Get this working
+    # off_days should look like this:
+    #  {
+    #       "day": "mon",
+    #       "type": "half"
+    #     },
+    #     {
+    #       "day": "tue",
+    #       "type": "whole"
+    #     },
+    #     {
+    #       "day": "wed",
+    #       "type": "half"
+    # }
+    # No keys coming from the frontend.
+    # Find and update the required records.
+    # There will only ever be two half days and one whole day.
+
     off_days
     |> Enum.map(&Map.put(&1, :person_id, person_id))
     |> Enum.map(&OffDay.changeset(%OffDay{}, &1))
