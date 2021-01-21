@@ -1,0 +1,3 @@
+defmodule Friends do
+
+end
