@@ -25,7 +25,7 @@ defmodule Friends.OffDays.OffDay do
     message
     |> cast(params, @required_attrs)
     |> validate_required(@required_attrs)
-    |> validate_length(:type, max: 40)
-    |> validate_length(:hour, max: 2)
+    |> validate_length(:type, max: 5)
+    |> validate_length(:hour, max: 3)
   end
 end
