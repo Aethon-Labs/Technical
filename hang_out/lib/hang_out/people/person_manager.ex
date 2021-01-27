@@ -34,5 +34,20 @@ defmodule HangOut.People.PersonManager do
     end
   end
 
+  def find_by({field, value}) do
+    person =
+      Person
+      |> Repo.get_by([{field, value}])
+
+    case person do
+      nil -> {:error, "The day does not exist"}
+      _ -> {:ok, person}
+    end
+  end
+
   def list_people(), do: Repo.all(Person)
+
+  def load_off_days(person) do
+    Repo.preload(person, :off_days, force: true)
+  end
 end
