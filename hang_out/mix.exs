@@ -30,6 +30,7 @@ defmodule HangOut.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
       {:timex, "~> 3.1"},
+      {:ex_machina, "~> 2.5.0", only: :test},
       # {:postgrex, ">= 0.0.0"},
       {:myxql, "~> 0.4.0"},
       {:phoenix_html, "~> 2.11"},

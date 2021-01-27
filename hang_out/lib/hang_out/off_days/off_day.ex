@@ -28,4 +28,9 @@ defmodule HangOut.OffDays.OffDay do
     |> validate_length(:type, max: 5)
     |> validate_length(:day, max: 3)
   end
+
+  def update_changeset(off_day, params) do
+    off_day
+      |> cast(params, [:type])
+  end
 end
