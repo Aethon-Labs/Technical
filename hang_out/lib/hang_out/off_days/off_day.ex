@@ -20,8 +20,8 @@ defmodule HangOut.OffDays.OffDay do
   end
 
   def changeset(message, params) do
-    # TODO: make sure only valid days and day types (half, whole) can be saved here
-    # TODO: make sure there can only be one off day per day
+    # TECHNICAL-TODO: make sure only valid days and day types (half, whole) can be saved here
+    # TECHNICAL-TODO: make sure there can only be one off day per day
     message
     |> cast(params, @required_attrs)
     |> validate_required(@required_attrs)

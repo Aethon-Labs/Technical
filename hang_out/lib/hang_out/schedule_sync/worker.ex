@@ -5,7 +5,7 @@ defmodule HangOut.ScheduleSync.ScheduleSync.Worker do
   use GenServer
   require Logger
 
-  # TODO: Get this to call this URL every hour: https://google.com/
+  # TECHNICAL-TODO: Get this to call this URL every hour: https://google.com/
 
   def start_link do
     GenServer.start_link(__MODULE__, :nostate, name: __MODULE__)
