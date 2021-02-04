@@ -10,7 +10,7 @@ defmodule HangOut.OffDays.OffDayManager do
     This function will receive the complete new schedule for a given person and update it.
   """
   def update_off_days(person_id, off_days) do
-    # TECHNICAL-TODO: Get this working
+    # TECHNICAL-TODO: Get this working. See the test here: `hang_out/test/hang_out/off_days/off_day_manager_test.exs`
     off_days
     |> Enum.map(&Map.put(&1, :person_id, person_id))
     |> Enum.map(&OffDay.changeset(%OffDay{}, &1))
